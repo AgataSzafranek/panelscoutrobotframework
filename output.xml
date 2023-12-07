@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231207 09:14:45.767" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Login Rf" source="C:\Users\owner\PycharmProjects\pythonProject\test_login_rf.robot">
+<test id="s1-t1" name="Login to the system" line="14">
+<kw name="Open Login Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231207 09:14:46.199" level="INFO">Opening browser 'Chrome' to base url 'https://scouts-test.futbolkolektyw.pl/en'.</msg>
+<status status="PASS" starttime="20231207 09:14:46.198" endtime="20231207 09:14:51.635"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel - sign in</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231207 09:14:51.650" level="INFO">Page title is 'Scouts panel - sign in'.</msg>
+<status status="PASS" starttime="20231207 09:14:51.635" endtime="20231207 09:14:51.650"/>
+</kw>
+<status status="PASS" starttime="20231207 09:14:46.198" endtime="20231207 09:14:51.650"/>
+</kw>
+<kw name="Type In Email">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAILINPUT}</arg>
+<arg>user07@getnada.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231207 09:14:51.652" level="INFO">Typing text 'user07@getnada.com' into text field 'xpath=//*[@id='login']'.</msg>
+<status status="PASS" starttime="20231207 09:14:51.651" endtime="20231207 09:14:51.966"/>
+</kw>
+<status status="PASS" starttime="20231207 09:14:51.651" endtime="20231207 09:14:51.966"/>
+</kw>
+<kw name="Type In Password">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORDINPUT}</arg>
+<arg>Test-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231207 09:14:51.967" level="INFO">Typing text 'Test-1234' into text field 'xpath=//*[@id='password']'.</msg>
+<status status="PASS" starttime="20231207 09:14:51.967" endtime="20231207 09:14:52.153"/>
+</kw>
+<status status="PASS" starttime="20231207 09:14:51.966" endtime="20231207 09:14:52.153"/>
+</kw>
+<kw name="Click On Submit Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGNINBUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231207 09:14:52.155" level="INFO">Clicking element 'xpath=//*[(text()= 'Sign in')]'.</msg>
+<status status="PASS" starttime="20231207 09:14:52.154" endtime="20231207 09:14:52.249"/>
+</kw>
+<status status="PASS" starttime="20231207 09:14:52.154" endtime="20231207 09:14:52.249"/>
+</kw>
+<kw name="Assert Dashboard">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PAGELOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231207 09:14:57.631" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231207 09:14:57.631" level="FAIL">Element 'xpath=//*[@id="__next"]/div[1]/main/div[3]/div[1]/div/div[1]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20231207 09:14:52.250" endtime="20231207 09:14:57.634"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Scouts panel</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" starttime="20231207 09:14:57.635" endtime="20231207 09:14:57.635"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>alert.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20231207 09:14:57.635" endtime="20231207 09:14:57.635"/>
+</kw>
+<status status="FAIL" starttime="20231207 09:14:52.249" endtime="20231207 09:14:57.635"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231207 09:14:57.636" endtime="20231207 09:15:02.318"/>
+</kw>
+<status status="FAIL" starttime="20231207 09:14:46.197" endtime="20231207 09:15:02.319">Element 'xpath=//*[@id="__next"]/div[1]/main/div[3]/div[1]/div/div[1]' not visible after 5 seconds.</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" starttime="20231207 09:14:45.769" endtime="20231207 09:15:02.321"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Login Rf">Test Login Rf</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
